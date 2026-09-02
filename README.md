@@ -52,8 +52,6 @@ python backend/server.py
 # Engine runs on 127.0.0.1:6379
 ```
 
-````
-
 ### 2. Start the FastAPI Bridge
 
 ```bash
@@ -107,4 +105,7 @@ The raw TCP server currently accepts the following commands via standard RESP pr
 ```
 
 ```
-````
+
+```
+
+```

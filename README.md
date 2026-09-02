@@ -1,5 +1,6 @@
-$content = @"
+Here is the complete, fully styled `README.md` text. You can just copy everything inside the code block below, open your `README.md` file on GitHub (or locally in your text editor), paste it over what's currently there, and save it!
 
+````markdown
 <div align="center">
   
   # ⏳ TimeTravel-Redis
@@ -54,4 +55,59 @@ Clone the repository and open three separate terminal windows to run the stack c
 # Activate your virtual environment first
 python backend/server.py
 # Engine runs on 127.0.0.1:6379
+```
+````
+
+### 2. Start the FastAPI Bridge
+
+```bash
+# Ensure venv is active
+uvicorn backend.api:app --reload
+# Bridge runs on [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+```
+
+### 3. Start the Telemetry Dashboard
+
+```bash
+cd frontend
+npm install
+npm run dev
+# UI runs on http://localhost:3000
+
+```
+
+---
+
+## 🧪 Running the Visual Simulation
+
+Once all three services are running, open `http://localhost:3000` in your browser.
+
+In a backend terminal, run the test script to inject data with strict 3-second TTLs:
+
+```bash
+python backend/test_client.py
+
+```
+
+_Watch the Next.js dashboard seamlessly track the data lifecycle: from active memory injection, to TTL countdown, to automatic lazy-eviction into the Tombstone Vault._
+
+---
+
+## 💻 Supported Commands
+
+The raw TCP server currently accepts the following commands via standard RESP protocol:
+
+| Command                  | Description                                                   |
+| ------------------------ | ------------------------------------------------------------- |
+| `PING`                   | Connection health check.                                      |
+| `SET key value [EX sec]` | Store a key-value pair, optionally with a Time-To-Live.       |
+| `GET key`                | Retrieve a value (triggers lazy eviction if expired).         |
+| `DEL key`                | Manually remove a key and send it to the vault.               |
+| `STATS`                  | Retrieve total key count, active TTLs, and vault size.        |
+| `KEYS`                   | List all currently active keys in memory.                     |
+| `RESTORE`                | Recover the most recently deleted/expired key from the vault. |
+
+```
+
 ```

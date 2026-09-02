@@ -102,10 +102,4 @@ The raw TCP server currently accepts the following commands via standard RESP pr
 | `KEYS`                   | List all currently active keys in memory.                     |
 | `RESTORE`                | Recover the most recently deleted/expired key from the vault. |
 
-```
 
-```
-
-```
-
-```

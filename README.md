@@ -1,9 +1,6 @@
-````markdown
-<div align="center">
-  
-  # ⏳ TimeTravel-Redis
-  
-  **A custom, in-memory caching database built from scratch using raw TCP sockets, Python `asyncio`, and the REdis Serialization Protocol (RESP).**
+# ⏳ TimeTravel-Redis
+
+**A custom, in-memory caching database built from scratch using raw TCP sockets, Python `asyncio`, and the REdis Serialization Protocol (RESP).**
 
 ![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
@@ -11,7 +8,7 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-</div>
+---
 
 <br />
 
@@ -54,6 +51,7 @@ Clone the repository and open three separate terminal windows to run the stack c
 python backend/server.py
 # Engine runs on 127.0.0.1:6379
 ```
+
 ````
 
 ### 2. Start the FastAPI Bridge
@@ -109,3 +107,4 @@ The raw TCP server currently accepts the following commands via standard RESP pr
 ```
 
 ```
+````

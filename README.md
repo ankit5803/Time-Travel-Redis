@@ -1,5 +1,3 @@
-Here is the complete, fully styled `README.md` text. You can just copy everything inside the code block below, open your `README.md` file on GitHub (or locally in your text editor), paste it over what's currently there, and save it!
-
 ````markdown
 <div align="center">
   
